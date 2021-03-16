@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     function showPoke(pokemon){
         let info =`<div> <img src="${pokemon.sprites.front_default}"> </div>
-                <div> 
-                <h1>${pokemon.id} - ${pokemon.name}</h1>
-                <h3>Tipo: ${pokemon.types.map(item=>item.type.name)}</h3>
-                <h3>Movimentos:  ${pokemon.moves.map(item=>item.move.name)}</h3>
-                <h3>Peso: ${pokemon.weight/10} Kg</h3>
-                <h3>Altura: ${pokemon.height/10} m</h3>
+                <div class="pokeSpecs"> 
+                    <h1>${pokemon.id} - ${pokemon.name}</h1>
+                    <h3>Type: ${pokemon.types.map(item=>item.type.name)}</h3>
+                    <h3>Moves:  ${pokemon.moves.map(item=>item.move.name)}</h3>
+                    <h3>Weight: ${pokemon.weight/10} Oz</h3>
+                    <h3>Height: ${pokemon.height/10} ft</h3>
                 </div>`
         document.querySelector("#resultado").innerHTML=info;
 
@@ -28,12 +28,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     document.querySelector("#btnConsulta").addEventListener("click", function(){
         var nome=document.querySelector("#txtnomepoke").value;
         if(nome==""){
-            alert("Nome ou número vazio");
+            alert("Null name/number");
         }
         else{
             searchPoke(nome);
-            
-
         }
 
     });   

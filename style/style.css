@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Pokefont';
+    src:url("./pokemon/Pokemon\ Solid.ttf");
+}
+
+.pokeSpecs{
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: yellow;
+    padding: 15px;
+}
+h1{
+    font-family: 'Pokefont';
+}
